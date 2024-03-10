@@ -1,0 +1,9 @@
+html,
+body {
+  height: 100vw;
+}
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+}
