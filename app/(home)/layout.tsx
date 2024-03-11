@@ -1,12 +1,17 @@
 import { Footer } from "./_components/footer";
 import { Navbar } from "./_components/navbar";
-import styles from "./styles/layout.module.scss";
 
 const HomeLayout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <div>
+    <div className="relative h-screen bg-slate-100">
       <Navbar />
-      <main className={styles["input-field"]}>{children}</main>
+      <main
+        id="pouet"
+        className="relative bg-cover bg-center filter blur-xs h-full"
+        style={{ backgroundImage: `url('/bg.jpeg')` }}
+      >
+        {children}
+      </main>
       <Footer />
     </div>
   );
