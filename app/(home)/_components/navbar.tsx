@@ -4,17 +4,17 @@ import { Button } from "@/components/ui/button";
 
 export const Navbar = () => {
   return (
-    <div className="fixed top-0 z-10 w-full h-14 px-4 border-b shadow-sm bg-white flex items-center">
+    <div className="fixed top-0 z-10 border-b border-slate-800 shadow-sm w-full h-14 px-4 bg-slate-900 flex items-center">
       <div className="md:max-w-screen-2xl mx-auto flex items-center w-full justify-between">
         <Link href="/">
           <Logo width={64} height={64} />
         </Link>
         <div className="space-x-4 md:block md:w-auto flex items-center justify-between w-full">
           <Button size="sm" variant="primary" asChild>
-            <Link href="/sign-in">Par genre</Link>
+            <Link href="/genre">By genre</Link>
           </Button>
           <Button size="sm" variant="primary" asChild>
-            <Link href="/sign-up">Par thème</Link>
+            <Link href="/theme">By theme</Link>
           </Button>
         </div>
       </div>

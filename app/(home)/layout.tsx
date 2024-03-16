@@ -7,7 +7,7 @@ const HomeLayout = ({ children }: { children: React.ReactNode }) => {
       <Navbar />
       <main
         id="pouet"
-        className="relative bg-cover bg-center filter blur-xs h-full"
+        className="relative bg-cover bg-center h-full flex justify-center align-center"
         style={{ backgroundImage: `url('/bg.jpeg')` }}
       >
         {children}

@@ -1,6 +1,6 @@
 import Image from "next/image";
-import Link from "next/link";
 import localFont from "next/font/local";
+import styles from "./styles/logo.module.css";
 
 import { cn } from "@/lib/utils";
 
@@ -14,12 +14,14 @@ const Logo = ({ width, height }: { width: number; height: number }) => {
       <Image src="/logo.png" alt="Logo" width={width} height={height} />
       <p
         className={cn(
-          `${width === 64 ? "text-lg" : "text-sm"} text-neutral-700`,
+          `${width === 64 ? "text-lg" : "text-sm"}`,
           headingFont.className
         )}
       >
-        {" "}
-        Mad Games Tycoon 2 - Simulator
+        <span className={styles.redTextStroke}>MAD </span>
+        <span className={styles.blueTextStroke}>GAMES TYCOON </span>
+        <span className={styles.redTextStroke}>2 </span>
+        <span className="text-slate-200"> - SIMULATOR </span>
       </p>
     </div>
   );

@@ -17,7 +17,7 @@ module.exports = {
       },
     },
     extend: {
-      blur: {
+      backdropBlur: {
         xs: "3px",
       },
       colors: {
