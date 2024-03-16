@@ -1,0 +1,14 @@
+.redTextStroke {
+  -webkit-text-stroke: 0.8px white;
+  background: -webkit-linear-gradient(#bd1517, #c10f0d);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.blueTextStroke {
+  -webkit-text-stroke: 0.8px white;
+  background: -webkit-linear-gradient(#1999e1, #0f5cc6);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
