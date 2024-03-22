@@ -1,21 +1,31 @@
 "use client";
-import { useState, useEffect } from "react";
-import { ComboboxGenre } from "./_components/genre-combobox";
+
+import { useState } from "react";
+import { Inputs } from "./_components/inputs";
+import { Datas } from "./_components/datas";
 
 const GenrePage = () => {
   const [selectedGenre, setSelectedGenre] = useState("");
-
-  const handleGenreSelection = (genre: string) => {
-    setSelectedGenre(genre);
-  };
+  const [selectedSubGenre, setSelectedSubGenre] = useState("");
+  const [selectedTheme, setSelectedTheme] = useState("");
+  const [selectedSubTheme, setSelectedSubTheme] = useState("");
 
   return (
     <div className="w-full backdrop-blur-sm">
-      <div className="relative flex justify-between inset-0 top-16 px-4">
-        <div className="flex bg-red-300">
-          <ComboboxGenre onSelectGenre={handleGenreSelection} />
-        </div>
-        <div className="flex bg-blue-300"></div>
+      <div className="relative flex justify-around inset-0 top-16 px-4">
+        <Inputs
+          selectedGenre={selectedGenre}
+          setSelectedGenre={setSelectedGenre}
+          selectedSubGenre={selectedSubGenre}
+          setSelectedSubGenre={setSelectedSubGenre}
+          selectedTheme={selectedTheme}
+          setSelectedTheme={setSelectedTheme}
+          setSelectedSubTheme={setSelectedSubTheme}
+        />
+        <Datas
+          selectedGenre={selectedGenre}
+          selectedSubGenre={selectedSubGenre}
+        />
       </div>
     </div>
   );

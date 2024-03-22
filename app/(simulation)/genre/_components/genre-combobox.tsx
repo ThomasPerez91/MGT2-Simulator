@@ -1,10 +1,10 @@
 "use client";
 
-import * as React from "react";
+import { useState } from "react";
 import { CaretSortIcon, CheckIcon } from "@radix-ui/react-icons";
 
 import { cn } from "@/lib/utils";
-import { genreList } from "@/constants/genre";
+import { genresData, genresList } from "@/constants/genres";
 import { Button } from "@/components/ui/button";
 import {
   Command,
@@ -21,18 +21,33 @@ import {
 } from "@/components/ui/popover";
 
 interface ComboboxGenreProps {
+  isSubGenre?: boolean;
+  disabledSubGenres?: boolean;
+  selectedGenre?: string;
   onSelectGenre: (genre: string) => void;
 }
 
-export const ComboboxGenre = ({ onSelectGenre }: ComboboxGenreProps) => {
-  const [open, setOpen] = React.useState(false);
-  const [value, setValue] = React.useState("");
+export const ComboboxGenre = ({
+  isSubGenre = false,
+  disabledSubGenres = false,
+  selectedGenre,
+  onSelectGenre,
+}: ComboboxGenreProps) => {
+  const [open, setOpen] = useState(false);
+  const [value, setValue] = useState("");
 
-  const genres = genreList;
+  let genres = selectedGenre
+    ? genresList.filter((genre) => genre.value !== selectedGenre)
+    : genresList;
+
+  let bestSubGenres = selectedGenre
+    ? genresData[selectedGenre]?.bestSubGenres?.map(
+        (subGenre) => subGenre.value
+      )
+    : [];
 
   const handleSelect = (currentValue: string) => {
     if (currentValue === value) {
-      console.log("same value");
       setValue("");
       onSelectGenre("");
     } else {
@@ -49,9 +64,13 @@ export const ComboboxGenre = ({ onSelectGenre }: ComboboxGenreProps) => {
           role="combobox"
           aria-expanded={open}
           className="w-[200px] justify-between"
+          disabled={disabledSubGenres}
         >
           {value
-            ? genres.find((genre) => genre.value === value)?.label
+            ? genres.find((genre) => genre.value === value)?.label ??
+              (isSubGenre ? "Select sub genre..." : "Select genre...")
+            : isSubGenre
+            ? "Select sub genre..."
             : "Select genre..."}
           <CaretSortIcon className="ml-2 h-4 w-4 shrink-0 opacity-50" />
         </Button>
@@ -64,6 +83,9 @@ export const ComboboxGenre = ({ onSelectGenre }: ComboboxGenreProps) => {
             <CommandList>
               {genres.map((genre) => (
                 <CommandItem
+                  className={
+                    bestSubGenres.includes(genre.value) ? "font-bold" : ""
+                  }
                   key={genre.value}
                   value={genre.value}
                   onSelect={() => {
