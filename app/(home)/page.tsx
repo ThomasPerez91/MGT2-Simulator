@@ -1,6 +1,7 @@
 import Link from "next/link";
 import LocalFont from "next/font/local";
 import { Poppins } from "next/font/google";
+import styles from "@/components/styles/logo.module.css";
 
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
@@ -24,7 +25,10 @@ const HomePage = () => {
         )}
       >
         <h1 className="text-3xl md:text-6xl text-center text-slate-100 mb-6">
-          Welcome to MGT2-Simulator, your ultimate companion
+          Welcome to <span className={styles.redTextStroke}>M</span>
+          <span className={styles.blueTextStroke}>GT</span>
+          <span className={styles.redTextStroke}>2</span> - Simulator, your
+          ultimate companion
         </h1>
         <div className="text-3xl md:text-6xl bg-gradient-to-r from-indigo-800 to-purple-200 text-white px-4 p-2 rounded-md pb-4 w-fit">
           for optimizing game setups
