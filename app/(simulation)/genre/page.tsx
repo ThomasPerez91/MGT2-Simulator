@@ -12,7 +12,7 @@ const GenrePage = () => {
 
   return (
     <div className="w-full backdrop-blur-sm">
-      <div className="relative flex justify-around inset-0 top-16 px-4">
+      <div className="px-4 mt-24 flex flex-col items-center space-y-6 lg:flex-row lg:justify-around lg:items-start lg:space-y-0">
         <Inputs
           selectedGenre={selectedGenre}
           setSelectedGenre={setSelectedGenre}
