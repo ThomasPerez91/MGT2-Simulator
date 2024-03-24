@@ -18,7 +18,9 @@ interface DatasProps {
 
 export const Datas = ({ selectedGenre, selectedSubGenre }: DatasProps) => {
   if (!selectedGenre)
-    return <div id="datas" className="flex flex-col bg-gray-100"></div>;
+    return (
+      <div id="datas" className="w-[32rem] flex flex-col bg-gray-100"></div>
+    );
 
   const datas = genresData[selectedGenre];
   const designPriorities = datas.designPriorities;

@@ -74,7 +74,7 @@ export const ComboboxTheme = ({
           variant="outline"
           role="combobox"
           aria-expanded={open}
-          className="w-[200px] justify-between"
+          className="w-[230px] justify-between"
           disabled={!selectedGenre || disabledSubTheme}
         >
           {value && !disabledSubTheme
