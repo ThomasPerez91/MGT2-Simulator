@@ -19,6 +19,7 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover";
+import Image from "next/image";
 
 interface ComboboxGenreProps {
   isSubGenre?: boolean;
@@ -63,15 +64,27 @@ export const ComboboxGenre = ({
           variant="outline"
           role="combobox"
           aria-expanded={open}
-          className="w-[200px] justify-between"
+          className="w-[230px] justify-between"
           disabled={disabledSubGenres}
         >
-          {value
-            ? genres.find((genre) => genre.value === value)?.label ??
-              (isSubGenre ? "Select sub genre..." : "Select genre...")
-            : isSubGenre
-            ? "Select sub genre..."
-            : "Select genre..."}
+          <div className="flex items-center">
+            {value && genres.find((genre) => genre.value === value)?.path && (
+              <Image
+                src={genres.find((genre) => genre.value === value)?.path ?? ""}
+                alt="genre icon"
+                width={24}
+                height={24}
+                className="mr-2"
+              />
+            )}
+            {value
+              ? genres.find((genre) => genre.value === value)?.label ??
+                (isSubGenre ? "Select sub genre..." : "Select genre...")
+              : isSubGenre
+              ? "Select sub genre..."
+              : "Select genre..."}
+          </div>
+
           <CaretSortIcon className="ml-2 h-4 w-4 shrink-0 opacity-50" />
         </Button>
       </PopoverTrigger>
@@ -94,6 +107,13 @@ export const ComboboxGenre = ({
                     setOpen(false);
                   }}
                 >
+                  <Image
+                    src={genre.path}
+                    alt={genre.label}
+                    width={24}
+                    height={24}
+                    className="mr-2"
+                  />
                   {genre.label}
                   <CheckIcon
                     className={cn(
