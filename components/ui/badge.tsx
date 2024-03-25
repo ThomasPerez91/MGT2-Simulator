@@ -17,6 +17,8 @@ const badgeVariants = cva(
         outline: "text-foreground",
         datas:
           "border-transparent bg-white text-slate-900 w-10 h-6 rounded-sm flex justify-center items-center ml-2 shadow-[inset_0_1px_2px_rgba(0,0,0,0.6)]",
+        target:
+          "border-transparent bg-white text-slate-900 rounded-sm flex justify-center items-center ml-2 shadow-lg",
       },
     },
     defaultVariants: {
