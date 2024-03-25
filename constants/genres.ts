@@ -1,4 +1,4 @@
-import { GenresDataInterface } from "@/types/genresDataInterface";
+import { GenresDataInterface } from "@/types/genres-data-interface";
 
 export const genresData: GenresDataInterface = {
   action: {
@@ -32,7 +32,10 @@ export const genresData: GenresDataInterface = {
         label: "Visual Novel",
       },
     ],
-    targets: ["teenagers", "adults"],
+    targets: [
+      { value: "teenagers", label: "Teenagers" },
+      { value: "adults", label: "Adults" },
+    ],
     themes: [
       {
         value: "agents",
@@ -765,7 +768,10 @@ export const genresData: GenresDataInterface = {
         label: "Survival Game",
       },
     ],
-    targets: ["adults", "seniors"],
+    targets: [
+      { value: "adults", label: "Adults" },
+      { value: "seniors", label: "Seniors" },
+    ],
     themes: [
       {
         value: "agents",
@@ -1302,7 +1308,10 @@ export const genresData: GenresDataInterface = {
         label: "Skill Game",
       },
     ],
-    targets: ["adults", "seniors"],
+    targets: [
+      { value: "adults", label: "Adults" },
+      { value: "seniors", label: "Seniors" },
+    ],
     themes: [
       {
         value: "agriculture",
@@ -1869,7 +1878,10 @@ export const genresData: GenresDataInterface = {
         label: "Skill Game",
       },
     ],
-    targets: ["adults", "seniors"],
+    targets: [
+      { value: "adults", label: "Adults" },
+      { value: "seniors", label: "Seniors" },
+    ],
     themes: [
       {
         value: "agriculture",
@@ -2546,7 +2558,10 @@ export const genresData: GenresDataInterface = {
         label: "Racing",
       },
     ],
-    targets: ["teenagers", "adults"],
+    targets: [
+      { value: "teenagers", label: "Teenagers" },
+      { value: "adults", label: "Adults" },
+    ],
     themes: [
       {
         value: "ancient china",
@@ -2883,7 +2898,10 @@ export const genresData: GenresDataInterface = {
         label: "Visual Novel",
       },
     ],
-    targets: ["teenagers", "adults"],
+    targets: [
+      { value: "teenagers", label: "Teenagers" },
+      { value: "adults", label: "Adults" },
+    ],
     themes: [
       {
         value: "agents",
@@ -3508,7 +3526,11 @@ export const genresData: GenresDataInterface = {
         label: "Puzzle Game",
       },
     ],
-    targets: ["teenagers", "adults", "seniors"],
+    targets: [
+      { value: "teenagers", label: "Teenagers" },
+      { value: "adults", label: "Adults" },
+      { value: "seniors", label: "Seniors" },
+    ],
     themes: [
       {
         value: "agents",
@@ -3921,7 +3943,10 @@ export const genresData: GenresDataInterface = {
         label: "Real-Time Strategy",
       },
     ],
-    targets: ["children", "teenagers"],
+    targets: [
+      { value: "children", label: "Children" },
+      { value: "teenagers", label: "Teenagers" },
+    ],
     themes: [
       {
         value: "agents",
@@ -4694,7 +4719,11 @@ export const genresData: GenresDataInterface = {
         label: "Strategy",
       },
     ],
-    targets: ["teenagers", "adults", "seniors"],
+    targets: [
+      { value: "teenagers", label: "Teenagers" },
+      { value: "adults", label: "Adults" },
+      { value: "seniors", label: "Seniors" },
+    ],
     themes: [
       {
         value: "agriculture",
@@ -5271,7 +5300,13 @@ export const genresData: GenresDataInterface = {
         label: "Puzzle Game",
       },
     ],
-    targets: ["children", "teenagers", "adults", "seniors", "all"],
+    targets: [
+      { value: "children", label: "Children" },
+      { value: "teenagers", label: "Teenagers" },
+      { value: "adults", label: "Adults" },
+      { value: "seniors", label: "Seniors" },
+      { value: "all", label: "All" },
+    ],
     themes: [
       {
         value: "airplanes",
@@ -5548,7 +5583,10 @@ export const genresData: GenresDataInterface = {
         label: "Role-Playing Game",
       },
     ],
-    targets: ["teenagers", "adults"],
+    targets: [
+      { value: "teenagers", label: "Teenagers" },
+      { value: "adults", label: "Adults" },
+    ],
     themes: [
       {
         value: "aliens",
@@ -6101,7 +6139,10 @@ export const genresData: GenresDataInterface = {
         label: "Visual Novel",
       },
     ],
-    targets: ["adults", "seniors"],
+    targets: [
+      { value: "adults", label: "Adults" },
+      { value: "seniors", label: "Seniors" },
+    ],
     themes: [
       {
         value: "ancient",
@@ -6522,7 +6563,10 @@ export const genresData: GenresDataInterface = {
         label: "Visual Novel",
       },
     ],
-    targets: ["teenagers", "adults"],
+    targets: [
+      { value: "teenagers", label: "Teenagers" },
+      { value: "adults", label: "Adults" },
+    ],
     themes: [
       {
         value: "agriculture",
@@ -7027,7 +7071,13 @@ export const genresData: GenresDataInterface = {
         label: "Interactive Movie",
       },
     ],
-    targets: ["children", "teenagers", "adults", "seniors", "all"],
+    targets: [
+      { value: "children", label: "Children" },
+      { value: "teenagers", label: "Teenagers" },
+      { value: "adults", label: "Adults" },
+      { value: "seniors", label: "Seniors" },
+      { value: "all", label: "All" },
+    ],
     themes: [
       {
         value: "agriculture",
@@ -7784,7 +7834,11 @@ export const genresData: GenresDataInterface = {
         label: "Real-Time Strategy",
       },
     ],
-    targets: ["children", "teenagers", "adults"],
+    targets: [
+      { value: "children", label: "Children" },
+      { value: "teenagers", label: "Teenagers" },
+      { value: "adults", label: "Adults" },
+    ],
     themes: [
       {
         value: "airplanes",
@@ -8237,7 +8291,10 @@ export const genresData: GenresDataInterface = {
         label: "Visual Novel",
       },
     ],
-    targets: ["adults", "seniors"],
+    targets: [
+      { value: "adults", label: "Adults" },
+      { value: "seniors", label: "Seniors" },
+    ],
     themes: [
       {
         value: "agriculture",
@@ -8830,7 +8887,11 @@ export const genresData: GenresDataInterface = {
         label: "Survival Game",
       },
     ],
-    targets: ["teenagers", "adults", "seniors"],
+    targets: [
+      { value: "teenagers", label: "Teenagers" },
+      { value: "adults", label: "Adults" },
+      { value: "seniors", label: "Seniors" },
+    ],
     themes: [
       {
         value: "agriculture",
@@ -9195,7 +9256,10 @@ export const genresData: GenresDataInterface = {
         label: "Visual Novel",
       },
     ],
-    targets: ["teenagers", "adults"],
+    targets: [
+      { value: "teenagers", label: "Teenagers" },
+      { value: "adults", label: "Adults" },
+    ],
     themes: [
       {
         value: "agents",
@@ -9844,7 +9908,13 @@ export const genresData: GenresDataInterface = {
         label: "Simulation",
       },
     ],
-    targets: ["children", "teenagers", "adults", "seniors", "all"],
+    targets: [
+      { value: "children", label: "Children" },
+      { value: "teenagers", label: "Teenagers" },
+      { value: "adults", label: "Adults" },
+      { value: "seniors", label: "Seniors" },
+      { value: "all", label: "All" },
+    ],
     themes: [
       {
         value: "androids",

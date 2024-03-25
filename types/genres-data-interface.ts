@@ -4,7 +4,10 @@ export interface GenresDataInterface {
       value: string;
       label: string;
     }[];
-    targets: string[];
+    targets: {
+      value: string;
+      label: string;
+    }[];
     themes: {
       value: string;
       label: string;

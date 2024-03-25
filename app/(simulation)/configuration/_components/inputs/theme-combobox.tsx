@@ -19,6 +19,7 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover";
+import { getThemesList } from "@/utils/get-themes-list";
 
 interface ComboboxThemeProps {
   isSubTheme?: boolean;
@@ -42,19 +43,17 @@ export const ComboboxTheme = ({
 
   let themes: { value: string; label: string }[] = [];
 
-  if (selectedGenre) {
-    themes = genresData[selectedGenre]?.themes || [];
+  if (selectedGenre && !selectedSubGenre) {
+    themes = getThemesList({ genre: selectedGenre });
+  } else if (selectedGenre && selectedSubGenre) {
+    themes = getThemesList({
+      genre: selectedGenre,
+      subGenre: selectedSubGenre,
+    });
+  }
 
-    if (selectedSubGenre) {
-      const subThemes = genresData[selectedSubGenre]?.themes || [];
-      themes = themes.filter((theme) =>
-        subThemes.some((subTheme) => subTheme.value === theme.value)
-      );
-    }
-
-    if (selectedTheme) {
-      themes = themes.filter((theme) => theme.value !== selectedTheme);
-    }
+  if (selectedTheme) {
+    themes = themes.filter((theme) => theme.value !== selectedTheme);
   }
 
   const handleSelect = (currentValue: string) => {

@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { Inputs } from "./_components/inputs/inputs";
 import { Datas } from "./_components/datas/datas";
+import { AvalableThemes } from "./_components/themes/avalable-themes";
 
 const GenrePage = () => {
   const [selectedGenre, setSelectedGenre] = useState("");
@@ -13,7 +14,7 @@ const GenrePage = () => {
   return (
     <div className="w-full backdrop-blur-sm">
       <div className="px-4 mt-24 flex flex-col items-center space-y-6 lg:flex-row lg:justify-around lg:items-start lg:space-y-0">
-        <div>
+        <div className="w-[32rem] space-y-6">
           <Inputs
             selectedGenre={selectedGenre}
             setSelectedGenre={setSelectedGenre}
@@ -23,7 +24,7 @@ const GenrePage = () => {
             setSelectedTheme={setSelectedTheme}
             setSelectedSubTheme={setSelectedSubTheme}
           />
-          <div>New Div</div>
+          <AvalableThemes genre={selectedGenre} subGenre={selectedSubGenre} />
         </div>
         <Datas
           selectedGenre={selectedGenre}

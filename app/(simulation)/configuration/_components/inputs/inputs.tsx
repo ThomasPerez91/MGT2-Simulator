@@ -14,6 +14,7 @@ interface InputsProps {
   setSelectedTheme: (theme: string) => void;
   setSelectedSubTheme: (subTheme: string) => void;
 }
+
 export const Inputs = ({
   selectedGenre,
   setSelectedGenre,
@@ -27,7 +28,7 @@ export const Inputs = ({
   const [showSubThemeComboboxe, setshowSubThemeComboboxe] = useState(false);
 
   return (
-    <div id="inputs" className="flex justify-around w-[30rem]">
+    <div id="inputs" className="flex justify-around">
       <div id="genre-inputs" className="flex flex-col gap-y-4">
         <div className="flex justify-center">
           <Switch

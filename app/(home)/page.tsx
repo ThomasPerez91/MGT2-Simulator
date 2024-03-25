@@ -46,10 +46,10 @@ const HomePage = () => {
       </div>
       <div className="gap-6 mt-6 flex justify-between align-center">
         <Button size="lg" asChild>
-          <Link href="/genre">Create by genre</Link>
+          <Link href="/configuration">Get best configurations</Link>
         </Button>
         <Button size="lg" asChild>
-          <Link href="/theme">Create by theme</Link>
+          <Link href="/theme">Show platforms</Link>
         </Button>
       </div>
     </div>

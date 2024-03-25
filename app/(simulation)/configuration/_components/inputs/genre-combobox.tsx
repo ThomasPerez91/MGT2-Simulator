@@ -68,10 +68,10 @@ export const ComboboxGenre = ({
           disabled={disabledSubGenres}
         >
           <div className="flex items-center">
-            {value && (
+            {value && genres.find((genre) => genre.value === value)?.path && (
               <Image
                 src={genres.find((genre) => genre.value === value)?.path ?? ""}
-                alt=""
+                alt="genre icon"
                 width={24}
                 height={24}
                 className="mr-2"

@@ -1,4 +1,3 @@
-import React from "react";
 import Image from "next/image";
 
 interface DesignPriorityItemProps {
@@ -32,7 +31,7 @@ export const DesignPriorityItem = ({
           ></span>
         </div>
       </div>
-      <div className="flex-none ml-2">
+      <div className="flex-none ml-2 pb-1">
         <span className="text-sm font-semibold text-blue-500">
           {item.priority}
         </span>

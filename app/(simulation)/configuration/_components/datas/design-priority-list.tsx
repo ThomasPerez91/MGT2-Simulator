@@ -1,4 +1,3 @@
-import React from "react";
 import { DesignPriorityItem } from "./design-priority-item";
 
 interface DesignPriorityListProps {
