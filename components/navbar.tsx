@@ -11,10 +11,10 @@ export const Navbar = () => {
         </Link>
         <div className="space-x-4 md:block md:w-auto flex items-center justify-between w-full">
           <Button size="sm" variant="primary" asChild>
-            <Link href="/configuration">Best configurations</Link>
+            <Link href="/configurations">Best configurations</Link>
           </Button>
           <Button size="sm" variant="primary" asChild>
-            <Link href="/platforms">Platforms</Link>
+            <Link href="/timelines">Timelines</Link>
           </Button>
         </div>
       </div>

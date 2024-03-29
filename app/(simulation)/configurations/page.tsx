@@ -12,7 +12,7 @@ const GenrePage = () => {
   const [selectedSubTheme, setSelectedSubTheme] = useState("");
 
   return (
-    <div className="w-full backdrop-blur-sm">
+    <div className="w-screen backdrop-blur-sm overflow-y-auto">
       <div className="px-4 mt-24 flex flex-col items-center space-y-6 lg:flex-row lg:justify-around lg:items-start lg:space-y-0">
         <div className="w-[32rem] space-y-6">
           <Inputs

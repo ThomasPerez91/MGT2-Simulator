@@ -17,7 +17,7 @@ const textFont = Poppins({
 
 const HomePage = () => {
   return (
-    <div className="flex items-center justify-center flex-col backdrop-blur-xs">
+    <div className="flex items-center justify-center flex-col backdrop-blur-xs w-full">
       <div
         className={cn(
           "flex items-center justify-center flex-col",
@@ -46,10 +46,10 @@ const HomePage = () => {
       </div>
       <div className="gap-6 mt-6 flex justify-between align-center">
         <Button size="lg" asChild>
-          <Link href="/configuration">Get best configurations</Link>
+          <Link href="/configurations">Get best configurations</Link>
         </Button>
         <Button size="lg" asChild>
-          <Link href="/theme">Show platforms</Link>
+          <Link href="/timelines">Show timelines</Link>
         </Button>
       </div>
     </div>
